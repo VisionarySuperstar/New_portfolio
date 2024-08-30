@@ -6,7 +6,7 @@ import { ExpandableCardDemo } from "@/components/ProjectCards";
 export default function Home() {
   return (
     <main className="">
-      <section className=" " id="services">
+      <section className="h-[100vh]" id="services">
         <AuroraBackgroundDemo />
       </section>
       <section className="bg-[var(--primary)] p-4" id="about">
