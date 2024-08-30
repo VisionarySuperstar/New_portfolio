@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --thirdcolor:#32fc6f;
+}
+body{
+  color: var(--primary);
+  scroll-behavior: smooth;
+  
+}
+.cssbutton {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+/* border: 1px solid var(--thirdcolor); */
+  border-radius: 2rem;
+  color: var(--primary);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cssbutton:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #252525; /* Adjusted color for background */
+  transition: all 0.3s;
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+.cssbutton:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  border-radius: 2rem;
+  z-index: -2;
+}
+
+.cssbutton:hover {
+  color: #fff;
+}
+
+.cssbutton:hover:before {
+  width: 100%;
+}
+
+
+.link{
+  position: relative;
+  padding: 3px;
+  transition-duration: 0.2s;
+}
+.link:hover{
+  color: var(--thirdcolor);
+}
+.link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--thirdcolor);
+  height: 2px;
+  width: 0;
+}
+.link:hover::after{
+  width: 100%;
+  transition-duration: 0.5s;
+}
