@@ -1604,6 +1604,10 @@ body{
     margin: 1.75rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
