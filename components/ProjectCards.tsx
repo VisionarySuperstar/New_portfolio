@@ -158,7 +158,7 @@ export function ExpandableCardDemo() {
           {/* Description */}
           <motion.p
             layoutId={`description-${card.description}-${id}`}
-            className="text-[var(--secondary)] dark:text-neutral-400"
+            className="hidden lg:block text-[var(--secondary)] dark:text-neutral-400"
           >
             {card.description}
           </motion.p>
@@ -215,69 +215,44 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Rey",
-    title: "Summertime Sadness",
+    description: "Decentralized finance Platform",
+    title: "Turbo Trades",
     src: "/proj1.png",
     ctaText: "Details",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://turbotrade.tech/",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          Turbo Trades is a decentralized finance (DeFi) platform designed for easy and secure wallet connection, swapping, liquidity management, and trading on both Maya and Thorchain networks
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
+    description: "Investment and launching facility",
+    title: "Vulcanpad",
     src: "/proj1.png",
     ctaText: "Details",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: " https://vulcanpad.tech/",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Vulcanpad is a platform that facilitates the launch and investment of innovative blockchain projects through secure, transparent, and efficient Initial Coin Offerings (ICOs) on the Arbitrum, Base, and BNB Networks.
         </p>
       );
     },
   },
 
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
+    description: "Meme token presale platform",
+    title: "MarsWTF",
     src: "/proj1.png",
     ctaText: "Details",
     ctaLink: "https://ui.aceternity.com/templates",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          MarsWTF is a meme token presale platform built on the Base Chain, aiming to be a gateway to the future of meme tokens on Mars. It provides a launchpad for innovative meme projects, allowing creators to raise funds and build communities while offering investors early access to potentially lucrative opportunities.
         </p>
       );
     },
