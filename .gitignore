@@ -1,9 +1,9 @@
 # Node.js dependencies
-/node_modules
+node_modules
 
 # Next.js build output
-/.next
-/out
+.next
+out
 
 # Production environment variables
 .env.local
