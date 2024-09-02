@@ -77,11 +77,11 @@ export function ExpandableCardDemo() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-[20rem] h-2 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-[20rem] h-full lg:h-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
-              <div className="bg-red-500 p-2 w-[90%]">
+              <div className="bg-slate-500 p-2 w-[90%]">
                 <div className="flex justify-between  items-start p-4 ">
                   <div className="">
                     <motion.h3
@@ -137,8 +137,8 @@ export function ExpandableCardDemo() {
         {/* Image on the left */}
         <motion.div layoutId={`image-${card.title}-${id}`}>
           <Image
-            width={100}
-            height={100}
+            width={500}
+            height={500}
             src={card.src}
             alt={card.title}
             className="w-10 h-10 lg:w-[40vw] lg:h-[50vh] rounded-lg object-cover object-top"
@@ -231,7 +231,7 @@ const cards = [
   {
     description: "Investment and launching facility",
     title: "Vulcanpad",
-    src: "/proj1.png",
+    src: "/proj2.png",
     ctaText: "Details",
     ctaLink: " https://vulcanpad.tech/",
     content: () => {
@@ -246,9 +246,9 @@ const cards = [
   {
     description: "Meme token presale platform",
     title: "MarsWTF",
-    src: "/proj1.png",
+    src: "/proj3.png",
     ctaText: "Details",
-    ctaLink: "https://ui.aceternity.com/templates",
+    ctaLink: "https://mars-wtf-0-0-0.vercel.app/",
     content: () => {
       return (
         <p>
@@ -257,47 +257,5 @@ const cards = [
       );
     },
   },
-  {
-    description: "Led Zeppelin",
-    title: "Stairway To Heaven",
-    src: "/proj1.png",
-    ctaText: "Details",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          Led Zeppelin, a legendary British rock band, is renowned for their
-          innovative sound and profound impact on the music industry. Formed in
-          London in 1968, they have become a cultural icon in the rock music
-          world. <br /> <br /> Their songs often reflect a blend of blues, hard
-          rock, and folk music, capturing the essence of the 1970s rock era.
-          With a career spanning over a decade, Led Zeppelin has released
-          numerous hit albums and singles that have garnered them a massive fan
-          following both in the United Kingdom and abroad.
-        </p>
-      );
-    },
-  },
-  {
-    description: "Mustafa Zahid",
-    title: "Toh Phir Aao",
-    src: "/proj1.png",
-    ctaText: "Details",
-    ctaLink: "https://ui.aceternity.com/templates",
-    content: () => {
-      return (
-        <p>
-          &quot;Aawarapan&quot;, a Bollywood movie starring Emraan Hashmi, is
-          renowned for its intense storyline and powerful performances. Directed
-          by Mohit Suri, the film has become a significant work in the Indian
-          film industry. <br /> <br /> The movie explores themes of love,
-          redemption, and sacrifice, capturing the essence of human emotions and
-          relationships. With a gripping narrative and memorable music,
-          &quot;Aawarapan&quot; has garnered a massive fan following both in
-          India and abroad, solidifying Emraan Hashmi&apos;s status as a
-          versatile actor.
-        </p>
-      );
-    },
-  },
+  
 ];
