@@ -131,7 +131,7 @@ export function ExpandableCardDemo() {
       layoutId={`card-${card.title}-${id}`}
       key={`card-${card.title}-${id}`}
       onClick={() => setActive(card)}
-      className="p-4 flex flex-row space-y-7 justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+      className="p-4 flex flex-row space-y-7 justify-between items-center hover:bg-[var(--primary)]/[0.7] dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
     >
       <div className="flex gap-7  flex-row items-center justify-evenly w-full">
         {/* Image on the left */}
