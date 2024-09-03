@@ -22,7 +22,7 @@ export function AuroraBackgroundDemo() {
         Hi, I&apos;m Lucas
        
         </div>
-        <div className="font-extralight text-base md:text-4xl text-[var(--secondary)] py-4">
+        <div className="font-extralight text-center text-base md:text-4xl text-[var(--secondary)] py-4">
         I&apos;m a Senior Fullstack Blockchain Engineer
         </div>
         <a href="https://www.linkedin.com/in/lucas-lee-a54185325/" target="_blank"  className="cssbutton  ">

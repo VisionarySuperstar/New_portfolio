@@ -6,10 +6,13 @@ import { ExpandableCardDemo } from "@/components/ProjectCards";
 export default function Home() {
   return (
     <main className="">
-      <section className="h-[100vh]" id="services">
+      <section className="" id="services">
         <AuroraBackgroundDemo />
       </section>
       <section className="bg-[var(--primary)] p-4" id="about">
+        <h1 className="py-4 lg:text-4xl text-3xl text-center font-bold text-[var(--secondary)]">
+          Projects
+        </h1>
         <ExpandableCardDemo />
       </section>
 

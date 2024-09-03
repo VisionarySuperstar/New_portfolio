@@ -68,7 +68,7 @@ export function ExpandableCardDemo() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="lg:w-[70%] w-[90%]   h-[70%] md:h-fit lg:max-h-[90vw]  flex flex-row bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+              className="lg:w-[70%] w-[90%]   h-[60%] md:h-fit lg:max-h-[90vw]  flex flex-row bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -77,22 +77,22 @@ export function ExpandableCardDemo() {
                   height={200}
                   src={active.src}
                   alt={active.title}
-                  className="w-[20rem] h-full lg:h-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                  className="w-[20rem] hidden lg:block h-full lg:h-full sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
 
-              <div className="bg-slate-500 p-2 w-[90%]">
+              <div className="bg-slate-500 p-2  lg:w-[90%]">
                 <div className="flex justify-between  items-start p-4 ">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
-                      className="font-bold text-xs text-[var(--secondary)] dark:text-neutral-200"
+                      className="font-bold  text-[var(--secondary)] dark:text-neutral-200"
                     >
                       {active.title}
                     </motion.h3>
                     <motion.p
                       layoutId={`description-${active.description}-${id}`}
-                      className="text-[var(--secondary)] dark:text-neutral-400"
+                      className="text-[var(--secondary)]  dark:text-neutral-400"
                     >
                       {active.description}
                     </motion.p>
@@ -102,9 +102,9 @@ export function ExpandableCardDemo() {
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-2 text-sm rounded-xl font-medium bg-green-500 text-white"
                   >
-                    {active.ctaText}
+                    {active.linkText}
                   </motion.a>
                 </div>
                 <div className="pt-4 relative px-4">
@@ -125,57 +125,53 @@ export function ExpandableCardDemo() {
           </div>
         ) : null}
       </AnimatePresence>
-      <ul className="max-w-5xl mx-auto w-full gap-7">
-  {cards.map((card, index) => (
-    <motion.div
-      layoutId={`card-${card.title}-${id}`}
-      key={`card-${card.title}-${id}`}
-      onClick={() => setActive(card)}
-      className="p-7 lg:m-7 flex flex-row space-y-14 justify-between items-center hover:bg-slate-600/20 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
-    >
-      <div className="flex gap-7 lg:gap-14  flex-row items-center justify-evenly w-full">
-        {/* Image on the left */}
-        <motion.div layoutId={`image-${card.title}-${id}`}>
-          <Image
-            width={500}
-            height={500}
-            src={card.src}
-            alt={card.title}
-            className="w-10 h-10 lg:w-[40vw] lg:h-[50vh] rounded-lg object-cover object-top"
-          />
-        </motion.div>
-
-        {/* Text and button on the right */}
-        <div className="flex lg:flex-col flex-row  sm:flex-1 lg:items-center text-center ">
-          {/* Title */}
-          <motion.h3
-            layoutId={`title-${card.title}-${id}`}
-            className="font-medium lg:text-base text-sm  text-[var(--secondary)] dark:text-neutral-200"
+      <ul className="max-w-5xl  mx-auto w-full gap-7">
+        {cards.map((card, index) => (
+          <motion.div
+            layoutId={`card-${card.title}-${id}`}
+            key={`card-${card.title}-${id}`}
+            onClick={() => setActive(card)}
+            className="p-7 lg:m-7 flex flex-row space-y-14 justify-between items-center hover:bg-slate-600/20 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
           >
-            {card.title}
-          </motion.h3>
-
-          {/* Description */}
-          <motion.p
-            layoutId={`description-${card.description}-${id}`}
-            className="hidden lg:block text-[var(--secondary)] dark:text-neutral-400"
-          >
-            {card.description}
-          </motion.p>
-
-          {/* Details Button */}
-          <motion.button
-            layoutId={`button-${card.title}-${id}`}
-            className="mt-2 lg:w-[10rem] w-[5rem] lg:px-4 px-2 py-2 lg:text-sm text-[0.5rem] rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black"
-          >
-            {card.ctaText}
-          </motion.button>
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</ul>
-
+            <div className="flex gap-3 lg:gap-14  flex-row items-center justify-between  w-full">
+              {/* Image on the left */}
+              <motion.div layoutId={`image-${card.title}-${id}`}>
+                <Image
+                  width={500}
+                  height={500}
+                  src={card.src}
+                  alt={card.title}
+                  className="w-14 bg-green-500 h-12 lg:w-[40vw] lg:h-[50vh] rounded-lg object-cover object-top"
+                />
+              </motion.div>
+              {/* Text and button on the right */}
+              <div className="flex space-x-3 justify-center items-center w-full h-full lg:flex-col  lg:justify-center flex-row  sm:flex-1 lg:items-center  text-center ">
+                {/* Title */}
+                <motion.h3
+                  layoutId={`title-${card.title}-${id}`}
+                  className="lg:text-base text-xs block py-auto text-center text-[var(--secondary)] "
+                >
+                  {card.title}
+                </motion.h3>
+                {/* Description */}
+                <motion.p
+                  layoutId={`description-${card.description}-${id}`}
+                  className="hidden lg:block text-[var(--secondary)] dark:text-neutral-400"
+                >
+                  {card.description}
+                </motion.p>
+                {/* Details Button */}
+                <motion.button
+                  layoutId={`button-${card.title}-${id}`}
+                  className="mt-2 lg:w-[10rem] w-[5rem] lg:px-4 px-2 py-2 lg:text-sm text-[0.5rem] rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black"
+                >
+                  {card.ctaText}
+                </motion.button>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </ul>
     </>
   );
 }
@@ -219,11 +215,14 @@ const cards = [
     title: "Turbo Trades",
     src: "/proj1.png",
     ctaText: "Details",
+    linkText:"Visit",
     ctaLink: "https://turbotrade.tech/",
     content: () => {
       return (
         <p>
-          Turbo Trades is a decentralized finance (DeFi) platform designed for easy and secure wallet connection, swapping, liquidity management, and trading on both Maya and Thorchain networks
+          Turbo Trades is a decentralized finance (DeFi) platform designed for
+          easy and secure wallet connection, swapping, liquidity management, and
+          trading on both Maya and Thorchain networks
         </p>
       );
     },
@@ -233,11 +232,15 @@ const cards = [
     title: "Vulcanpad",
     src: "/proj2.png",
     ctaText: "Details",
+    linkText:"Visit",
     ctaLink: " https://vulcanpad.tech/",
     content: () => {
       return (
         <p>
-          Vulcanpad is a platform that facilitates the launch and investment of innovative blockchain projects through secure, transparent, and efficient Initial Coin Offerings (ICOs) on the Arbitrum, Base, and BNB Networks.
+          Vulcanpad is a platform that facilitates the launch and investment of
+          innovative blockchain projects through secure, transparent, and
+          efficient Initial Coin Offerings (ICOs) on the Arbitrum, Base, and BNB
+          Networks.
         </p>
       );
     },
@@ -248,14 +251,18 @@ const cards = [
     title: "MarsWTF",
     src: "/proj3.png",
     ctaText: "Details",
+    linkText:"Visit",
     ctaLink: "https://mars-wtf-0-0-0.vercel.app/",
     content: () => {
       return (
         <p>
-          MarsWTF is a meme token presale platform built on the Base Chain, aiming to be a gateway to the future of meme tokens on Mars. It provides a launchpad for innovative meme projects, allowing creators to raise funds and build communities while offering investors early access to potentially lucrative opportunities.
+          MarsWTF is a meme token presale platform built on the Base Chain,
+          aiming to be a gateway to the future of meme tokens on Mars. It
+          provides a launchpad for innovative meme projects, allowing creators
+          to raise funds and build communities while offering investors early
+          access to potentially lucrative opportunities.
         </p>
       );
     },
   },
-  
 ];
