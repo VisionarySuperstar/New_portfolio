@@ -23,7 +23,7 @@ export default function Home() {
         <div className=" items-center justify-center py-4 grid lg:grid-rows-3 lg:grid-cols-5 grid-cols-3 text-xs   gap-4 ">
           {skills.map((item)=>(
             
-          <AlertDialogDemo  name={item.name} description={item.description} />
+          <AlertDialogDemo key={item.name} name={item.name} description={item.description} />
           ))}
          
         </div>
